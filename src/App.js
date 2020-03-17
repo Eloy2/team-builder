@@ -12,6 +12,18 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+const MemberList = styled.div`
+  border-radius: 15px;
+  border: 2px solid white;
+  background-color: #4c2f8f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 3% 3% 3%;
+  margin-bottom: 3%;
+`
+
 function App() {
   const [listState, setListState] = useState([{
     id: 1,
@@ -29,8 +41,11 @@ function App() {
     <div className="App-header">
       <GlobalStyles/>
       <h1>Sign up to join the Team</h1>
+      <MemberList>
+        <h1>Team Members</h1>
+        <List members={listState}/>
+      </MemberList>
       <Form addMember={addMemberHandler}/>
-      <List members={listState}/>
     </div>
   );
 }

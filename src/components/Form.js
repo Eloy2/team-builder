@@ -12,10 +12,30 @@ const Button = styled.button`
     border-radius: 15px;
     border: 2px solid white;
     padding: 5%;
-    background-color: #4c2f8f;
+    background-color: #282c34;
     color: white;
     font-size: 1.2rem;
+    margin-top: 5%;
     margin-bottom: 5%;
+    box-shadow: 1px 3px 1px 3px #1e0a2b;
+
+    &:hover {
+        background-color: white;
+        color: #4c2f8f;
+        border-color: #4c2f8f;
+    }
+`
+
+const FormDiv = styled.form`
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: #4c2f8f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-bottom: 3%;
 `
 
 const Form = props => {
@@ -52,7 +72,8 @@ const Form = props => {
     }
 
     return (
-        <form onSubmit={formSubmitHandler}>
+        <FormDiv onSubmit={formSubmitHandler}>
+            <h1>Sign Up Here</h1>
             <Label htmlFor="name">First Name:</Label>
             <br/>
             <input
@@ -91,7 +112,7 @@ const Form = props => {
 
             <Button type="submit">Add Member</Button>
 
-        </form>
+        </FormDiv>
     );
 }
 
