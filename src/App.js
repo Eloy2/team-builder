@@ -12,14 +12,6 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-const Member = styled.div`
-  border-radius: 15px;
-  border: 2px solid black;
-  padding: 0 3%;
-  background-color: white;
-  color: #282c34;
-`
-
 function App() {
   const [listState, setListState] = useState([{
     id: 1,
